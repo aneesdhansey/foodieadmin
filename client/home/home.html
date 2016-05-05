@@ -1,0 +1,46 @@
+<!--<h1> {{ homeCtrl.message }} </h1>
+<p>Username : {{ homeCtrl.userName }} </p>
+<ul>
+    <li ng-click="homeCtrl.logout()">Logout</li>
+</ul>-->
+
+<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a ui-sref="home.dashboard">
+                        MeteorDemoApp
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="home.inventory">Inventory</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="home.purchase" class="active">Purchase</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="home.sales">Sales</a>
+                </li>
+                <li ng-click="homeCtrl.logout()">
+                    <a href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!--<div class="container-fluid">-->
+                <div class="row wow fadeIn" ui-view="modules">
+                    <div class="col-lg-12">
+                        <!--<p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>-->
+                        <!--<a href="#menu-toggle" class="btn btn-default" ng-click="homeCtrl.toggleSideBar()" id="menu-toggle">Toggle Menu</a>-->
+                    </div>
+                </div>
+            <!--</div>-->
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
